@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>calculation</h1>
+<div class = "container">
+    <div class="col-md-6">
+        <form method="POST">
+            <p>{{ form.address.label}}</p>
+            <p>{{ form.address (class_="form-control", placeholder="address")}}</p>
+        
+            <p>{{ form.bed.label}}</p>
+            <p>{{ form.bed (class_="form-control", placeholder="bed") }}</p>
+
+            <p>{{ form.bath.label}}</p>
+            <p>{{ form.bath (class_="form-control", placeholder="bath") }}</p>
+            
+            {{ form.submit (class_="btn btn-primary")}}
+        </form>
+        
+    </div>    
+</div>
+
+
+{% endblock %}
