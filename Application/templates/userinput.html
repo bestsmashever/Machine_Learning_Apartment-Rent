@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>calculation</h1>
+<div class = "container">
+    <div class="col-md-6">
+        <form method="POST">
+            <p>{{ form.street.label }}</p>
+            <p>{{ form.street (class_="form-control", placeholder="street")}}</p>
+
+            <p>{{ form.city.label }}</p>
+            <p>{{ form.city (class_="form-control", placeholder="city")}}</p>
+        
+            <p>{{ form.state.label }}</p>
+            <p>{{ form.state (class_="form-control", placeholder="state")}}</p>
+
+            <p>{{ form.bed.label }}</p>
+            <p>{{ form.bed (class_="form-control", placeholder="bed") }}</p>
+
+            <p>{{ form.bath.label }}</p>
+            <p>{{ form.bath (class_="form-control", placeholder="bath") }}</p>
+
+            <p>{{ form.sf.label }}</p>
+            <p>{{ form.sf (class_="form-control", placeholder="sf") }}</p>
+
+            <p>{{ form.free_rent.label }}</p>
+            <p>{{ form.free_rent (class_="form-control", placeholder="free_rent") }}</p>
+
+            <p>{{ form.washer_dryer_0.label }}</p>
+            <p>{{ form.washer_dryer_0 (class_="form-control") }}</p>
+            
+            <p>{{ form.washer_dryer_1.label }}</p>
+            <p>{{ form.washer_dryer_1 (class_="form-control") }}</p>
+            
+            <p>{{ form.washer_dryer_2.label }}</p>
+            <p>{{ form.washer_dryer_2 (class_="form-control") }}</p>
+            
+            <p>{{ form.walk_in_closet.label }}</p>
+            <p>{{ form.walk_in_closet (class_="form-control") }}</p>
+
+            <p>{{ form.hardwood_vinyl_floor.label }}</p>
+            <p>{{ form.hardwood_vinyl_floor (class_="form-control") }}</p>
+
+            {{ form.submit (class_="btn btn-primary")}}
+        </form>
+        
+    </div>    
+</div>
+
+
+{% endblock %}
