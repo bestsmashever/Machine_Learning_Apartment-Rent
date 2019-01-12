@@ -199,7 +199,7 @@ def ml():
             userinput["Washer/Dryer_1"],
             userinput["Washer/Dryer_2"],
             median_household_income,
-            70000,
+            population,
             walk_score,
             transit_score, 
             miles_from_domain, 
