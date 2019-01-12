@@ -23,7 +23,7 @@
                 </button>
                 <a class="navbar-brand" href="{{ url_for('home') }}">Home</a>
                 <a class="navbar-brand" href="{{ url_for('userinput') }}">Input</a>
-                <a class="navbar-brand" href="visualization.html">Visualization</a>
+                <a class="navbar-brand" href="{{ url_for('visualization') }}">Visualization</a>
             </div>
       </div>
     </nav>
@@ -34,11 +34,6 @@
       <br><br><br><br>
       <a class="btn btn-secondary btn-lg btn-outline-dark" id="button2">Predicted Rent: {{ rent_estimate }}</a>
     </div>
-    
-    
-    
-
-
     
     <footer class="footer">
       <span class="bottom">Rent Predictor</span>

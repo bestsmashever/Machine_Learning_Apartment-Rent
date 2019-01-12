@@ -212,5 +212,10 @@ def ml():
 
     return render_template('index.html', rent_estimate=rent_estimate)
 
+@app.route("/visualization", methods=['GET', 'POST'])
+def visualization():
+    return render_template('visualization.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True)
