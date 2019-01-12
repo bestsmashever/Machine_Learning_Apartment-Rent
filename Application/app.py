@@ -13,10 +13,6 @@ from bs4 import BeautifulSoup
 from splinter import Browser
 import pickle 
 
-# import Keras
-# import keras
-# from keras import backend as K
-
 # import api_key of google map
 from config import gkey
 
@@ -30,7 +26,7 @@ def home():
     return render_template("index.html")
 
 @app.route("/userinput", methods=['GET', 'POST'])
-def calculation():
+def userinput():
     global userinput
     form = UserInput(request.form)
     if request.method == "POST":
@@ -188,7 +184,7 @@ def scraping():
 
 @app.route("/ml", methods=['GET', 'POST'])
 def ml():
-    rf_model_filepath = 'static/resources/Random_Forest_Model.sav'
+    rf_model_filepath = 'static/resources/RF999_Model.sav'
     rf_model = pickle.load(open(rf_model_filepath, 'rb'))
 
     # input the information
@@ -211,8 +207,8 @@ def ml():
 
     X_new = pd.to_numeric(X_new)
     X_new = np.reshape(X_new, (1, 16))
-    rent_estimate = rf_model.predict(X_new)
-    print(X_new)
+    rent_estimate = round(rf_model.predict(X_new)[0], 2)
+    rent_estimate = f"${rent_estimate}"
 
     return render_template('index.html', rent_estimate=rent_estimate)
 
