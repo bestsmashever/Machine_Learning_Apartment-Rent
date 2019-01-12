@@ -1,1 +1,1 @@
-web: gunicorn Machine_Learning_Apartment_Rent:app
+web: gunicorn app:app
