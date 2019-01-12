@@ -73,7 +73,7 @@ def scraping():
 # Scrape demographic data
 
     # URL of page to be scraped
-    url_income = "http://www.energyjustice.net/justice/index.php?gsLayer=income&gfLon=-97.72610848&gfLat=30.26540305&giZoom=15&gsGeo=tract&giAdvanced=1&"
+    url_income = "http://www.energyjustice.net/justice/index.php"
     url_population = "https://www.freemaptools.com/find-population.htm"
 
     # retrive page with the requests module
