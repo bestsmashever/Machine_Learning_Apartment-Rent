@@ -94,7 +94,6 @@ pyasn1-modules==0.2.2
 pycparser==2.18
 pydotplus==2.0.2
 Pygments==2.2.0
-pygpu==0.7.6
 pylint==2.1.1
 pymongo==3.7.1
 PyMySQL==0.9.2
@@ -136,12 +135,6 @@ traitlets==4.3.2
 Twisted==17.5.0
 typed-ast==1.1.0
 urllib3==1.23
-us==1.0.0
 vaderSentiment==3.2.1
-wcwidth==0.1.7
-webencodings==0.5.1
-Werkzeug==0.14.1
-widgetsnbextension==3.4.0
 wrapt==1.10.11
 WTForms==2.2.1
-zope.interface==4.5.0
