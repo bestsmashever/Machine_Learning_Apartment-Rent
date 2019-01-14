@@ -1,5 +1,4 @@
 absl-py==0.6.1
-anaconda-client==1.7.1
 appdirs==1.4.3
 appnope==0.1.0
 asn1crypto==0.24.0
@@ -34,7 +33,6 @@ Flask==1.0.2
 Flask-PyMongo==2.1.0
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
--e git+https://github.com/pallets/flask@c92001d2fbaf4d5aa43bd44e56416ed27313377c#egg=flaskr&subdirectory=examples/tutorial
 future==0.16.0
 gast==0.2.0
 geojson==2.4.0
