@@ -76,8 +76,6 @@ def scraping():
     url_income = "http://www.energyjustice.net/justice/index.php"
     url_population = "https://www.freemaptools.com/find-population.htm"
 
-    # retrive page with the requests module
-    response = req.get(url_income)
     # create beautifulsoup object; parse with 'html.parser'
     executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
     browser = Browser("chrome", **executable_path, headless=False)
@@ -96,6 +94,11 @@ def scraping():
     income = income.split(',')[0] + income.split(',')[1]
     median_household_income = float(income)
     
+    browser.quit()
+
+    executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
+    browser = Browser("chrome", **executable_path, headless=False)
+    
     global population 
     browser.visit(url_population)
     time.sleep(5)
@@ -107,6 +110,8 @@ def scraping():
     browser.find_by_tag('p')[3].click()
     population = browser.find_by_id('div_output').text
     population = population.split(' ')[-1]
+    if population == "Wait...":
+        population = 20000
 
     browser.quit()
 
@@ -131,7 +136,7 @@ def scraping():
         search_box.fill(Address)
         search_button = browser.find_by_xpath('//*[@id="react-autowhatever-1--item-0"]/div/span[1]')
         search_button.click()
-        time.sleep(20)
+        time.sleep(15)
         global built_year
         built_year = browser.find_by_xpath('//*[@id="Building_YearBuilt"]/span[2]').text
         if len(built_year) > 4:

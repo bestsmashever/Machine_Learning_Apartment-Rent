@@ -16,8 +16,8 @@ The variables includes:
     - Walk_in_Closet
     - Hardwood/Vinyl Floor
     - Washer/Dryer
-    - Median_Household_Income
     - Population
+    - Median_Household_Income
     - Walk_Score
     - Transit_Score
     - Miles_From_Domain
@@ -30,3 +30,10 @@ Machine Learning models:
     - Neural Network
     - K Neareast Neighbour
 We picked up the Random Forest model because it has the highest R squared value.
+
+Data Sources:
+    - Costar: https://www.costar.com/
+    - Distance Calculator: https://www.mapdevelopers.com/distance_from_to.php
+    - Walk Score: https://www.walkscore.com/
+    - Population: https://www.freemaptools.com/find-population.htm
+    - Median_Household Income: http://www.energyjustice.net/justice/index.php
