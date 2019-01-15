@@ -75,8 +75,7 @@ def scraping():
     # URL of page to be scraped
     url_income = "http://www.energyjustice.net/justice/index.php"
     url_population = "https://www.freemaptools.com/find-population.htm"
-
-    # create beautifulsoup object; parse with 'html.parser'
+    
     executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
     browser = Browser("chrome", **executable_path, headless=False)
     
@@ -103,15 +102,15 @@ def scraping():
     browser.visit(url_population)
     time.sleep(5)
     browser.fill('radiusinputkm', '1.61')
-    time.sleep(5)
+    time.sleep(3)
     browser.find_by_id('tb_searchlocation').fill(Address)
-    # browser.find_by_id('tb_searchlocation').fill('\n')
-    time.sleep(5)
+    browser.find_by_id('tb_searchlocation').fill('\n')
+    time.sleep(3)
     browser.find_by_tag('p')[3].click()
     population = browser.find_by_id('div_output').text
     population = population.split(' ')[-1]
     if population == "Wait...":
-        population = 20000
+        population = 21658
 
     browser.quit()
 
@@ -212,6 +211,7 @@ def ml():
 
     X_new = pd.to_numeric(X_new)
     X_new = np.reshape(X_new, (1, 16))
+    print(X_new)
     rent_estimate = round(rf_model.predict(X_new)[0], 2)
     rent_estimate = f"${rent_estimate}"
 
