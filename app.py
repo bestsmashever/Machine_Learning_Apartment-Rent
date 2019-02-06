@@ -211,10 +211,8 @@ def ml():
 
     X_new = pd.to_numeric(X_new)
     X_new = np.reshape(X_new, (1, 16))
-    print(X_new)
     rent_estimate = round(rf_model.predict(X_new)[0], 2)
     rent_estimate = f"${rent_estimate}"
-
     return render_template('index.html', rent_estimate=rent_estimate)
 
 @app.route("/visualization", methods=['GET', 'POST'])
