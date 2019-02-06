@@ -11,7 +11,6 @@ from selenium import webdriver
 import time
 from bs4 import BeautifulSoup
 from splinter import Browser
-import pickle 
 
 # import api_key of google map
 from config import gkey
